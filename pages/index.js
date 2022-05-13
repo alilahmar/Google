@@ -33,7 +33,7 @@ export default function Home() {
       {/* body */}
       <form>
         <Image
-          src="https://www.google.co.uk/images/branding/googlelolo/2x/googlelolo_color_272x920dp.png"
+          src="https://www.google.co.uk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
           height={100}
           width={300}
         />
