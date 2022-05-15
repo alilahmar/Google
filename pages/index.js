@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Avatar from "../components/Avatar";
-import { SearchIcon, ViewGridIcon } from "@heroicons/react/solid";
+import { MicrophoneIcon, ViewGridIcon } from "@heroicons/react/solid";
+import { SearchIcon } from "@heroicons/react/outline";
+
 import Image from "next/image";
+import img from "../images/Ali.jpg";
 // import Image from "next/image";
 // import styles from '../styles/Home.module.css'
 
@@ -27,18 +30,25 @@ export default function Home() {
           {/* icon */}
           <ViewGridIcon className="h-10 w-10 p-2 rounded-full hover:bg-gray-100 cursor-pointer" />
           {/* avatar */}
-          <Avatar url="https://www.google.com/search?q=ali+lahmar&sxsrf=ALiCzsaDGkGVTNxqORpvQ5K7HVd_yVq3Pg:1652301627884&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjZ292cp9j3AhV1i_0HHfb-CRYQ_AUoAXoECAIQAw&biw=1536&bih=696&dpr=1.25#imgrc=FLVJVL0VNPnVDM" />
+          <Avatar />
         </div>
       </header>
       {/* body */}
       <form>
         <Image
-          src="https://www.google.co.uk/images/branding/googlelolo/2x/googlelolo_color_272x920dp.png"
+          src="https://www.google.co.uk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
           height={100}
           width={300}
         />
-        <div>
-          <SearchIcon className="h-10" />
+        <div className="flex w-full">
+          <SearchIcon className="h-10 mr-3 text-gray-500" />
+          {/* tailwind css does not work I set the background red and I dont see anything to see it */}
+          <input
+            type="text"
+            className="bg-red-500 border-2 border-rose-600  focus:outline-none"
+          />
+          {/* when I set a h-5 it does not work  */}
+          <MicrophoneIcon width={50} />
         </div>
       </form>
 
