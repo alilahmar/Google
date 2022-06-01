@@ -10,7 +10,7 @@ const SearchResults = ({ results }) => {
 
       {results.items[0].title}
 
-      {results.items?.map((result) => {
+      {results.items?.map((result) => (
         <div key={result.link} className="max-w-xl mb-8">
           <div>
             <a href={result.link} className="text-sm">
@@ -25,8 +25,8 @@ const SearchResults = ({ results }) => {
 
           <p>{result.snippet}</p>
           {console.log("salah", result.title)}
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 };
