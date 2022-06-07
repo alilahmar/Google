@@ -1,13 +1,15 @@
 import React from "react";
 import img from "../images/Ali.jpg";
-
+import Image from "next/image";
 const Avatar = ({ url, className }) => {
   return (
-    <img
+    <Image
       loading="lazy"
       src={img}
       alt="profile picture"
-      className={`h-10 rounded-full cursor-pointer transition duration.150 tranform hover:scale-110 ${className}`}
+      width={40}
+      height={40}
+      className={`h-2 rounded-full cursor-pointer transition duration.150 tranform hover:scale-110 ${className}`}
     />
   );
 };

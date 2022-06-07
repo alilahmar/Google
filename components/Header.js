@@ -38,9 +38,10 @@ const Header = () => {
             ref={searchInputRef}
             type="text"
             className="flex-grow w-full focus:outline-none"
+            defaultValue={router.query.term}
           />
           <XIcon
-            className="h-7 sm::mr-3 text-gray-500 cursor-pointer transition duration-100 trasform hover:scale-125"
+            className="h-7 sm::mr-3 pr-3 text-gray-500 cursor-pointer transition duration-100 trasform hover:scale-125"
             onClick={() => (searchInputRef.current.value = "")}
           />
           <MicrophoneIcon className=" mr-3 h-6 hidden sm:inline-flex text-blue-500 border-l-2 pl-4 border-gray-300" />

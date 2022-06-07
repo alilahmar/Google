@@ -1,4 +1,5 @@
 import React from "react";
+import PaginationButtons from "./PaginationButtons";
 
 const SearchResults = ({ results }) => {
   return (
@@ -8,25 +9,27 @@ const SearchResults = ({ results }) => {
         {results.searchInformation?.formattedSearchTime} seconds
       </p>
 
-      {results.items[0].title}
+      {/* {results.items[0].title} */}
 
-      {results.items?.map((result) => {
+      {results.items?.map((result) => (
         <div key={result.link} className="max-w-xl mb-8">
           <div>
             <a href={result.link} className="text-sm">
               {result.formattedUrl}
             </a>
             <a href={result.link}>
-              <h2 className="truncate text-xl text-blue-800 font-medium ">
+              <h2 className="truncate text-xl text-blue-800 font-medium hover:underline">
                 {result.title}
               </h2>
             </a>
           </div>
 
-          <p>{result.snippet}</p>
+          <p className="line-clamp-2">{result.snippet}</p>
           {console.log("salah", result.title)}
-        </div>;
-      })}
+        </div>
+      ))}
+
+      <PaginationButtons />
     </div>
   );
 };

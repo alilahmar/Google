@@ -2,14 +2,11 @@ import Head from "next/head";
 import Avatar from "../components/Avatar";
 import { MicrophoneIcon, ViewGridIcon } from "@heroicons/react/solid";
 import { SearchIcon } from "@heroicons/react/outline";
-
 import Image from "next/image";
 import img from "../images/Ali.jpg";
 import Footer from "../components/Footer";
 import { useRef } from "react";
 import { useRouter } from "next/router";
-// import Image from "next/image";
-// import styles from '../styles/Home.module.css'
 
 export default function Home() {
   const searchInputRef = useRef(null);
@@ -48,8 +45,8 @@ export default function Home() {
       {/* body */}
       {/* w-4/5 it does not work  */}
       <form
-        className="flex flex-col 
-      items-center mt-44 flex-grow w-4/5"
+        className="flex flex-col justify-center 
+      items-center  flex-grow"
       >
         <Image
           src="https://www.google.co.uk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
